@@ -1,0 +1,140 @@
+@import "mixin";
+@import "setting";
+@import "common";
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  body {
+    font-size: 4vw;
+    img {
+      max-width: 100%;
+    }
+  }
+  #bottom-nav {
+    padding: 10px 0;
+    box-sizing: border-box;
+    background: #ccc;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    a {
+      color: #fff;
+    }
+    ul {
+      li {
+        a {
+          padding: 3px 35px;
+          border-right: solid 1px #fff;
+        }
+        &:last-child {
+          a {
+            border-right: none;
+          }
+        }
+      }
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  br {
+    display: none;
+  }
+  .flex {
+    display: block;
+  }
+  .inbox {
+    padding: 0 2%;
+  }
+  .none {
+    display: block;
+  }
+
+  #wrap {
+    position: relative;
+    overflow: hidden;
+  }
+  .map {
+    position: relative;
+    width: 100%;
+    padding-top: 60%;
+    iframe {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  @include drawer(#fff, #000);
+
+  //todo__________________________________________________________________________________________________
+
+  /*---------main_visual------------*/
+  #main_visual {
+    width: 100%;
+    height: 100vw;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    z-index: 0;
+  }
+  .mv-txt {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    left: 0px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2%;
+    box-sizing: border-box;
+  }
+  #sub_vis {
+    width: 100%;
+    height: 60vw;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    z-index: 0;
+    // background: url(../img/main_bg.png) no-repeat;
+    background: url(../img/sb_vis.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .sb-txt {
+    padding: 0 2%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    left: 0px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  #top_slider li {
+    // height: 815px;
+    height: 100vw;
+  }
+  #top_slider li:nth-child(1) {
+    background: url(../img/main_vis01.png) no-repeat;
+    background-size: cover;
+  }
+  #top_slider li:nth-child(2) {
+    background: url(../img/main_vis02.png) no-repeat center top;
+    background-size: cover;
+  }
+  #top_slider li:nth-child(3) {
+    background: url(../img/main_vis03.png) no-repeat center top;
+    background-size: cover;
+  }
+}
